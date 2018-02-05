@@ -15,9 +15,10 @@ h1, h2 {
 
 h1 {
   font-size: 3rem;
-  margin: 0;
+  margin: 0 20px;
   @media (min-width: 600px) {
     font-size: 3rem;
+    margin: 0 40px;
   }
   @media (min-width: 900px) {
     font-size: 4rem;
@@ -37,17 +38,23 @@ a {
   background-color: $storm-red;
   display: flex;
   flex-direction: row;
-  justify-content: right;
+  justify-content: flex-end;
   height: 21px;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   padding: 5px 0;
+  @media (min-width: 600px) {
+    height: 41px;
+  }
 }
 
 .menu--link {
-  margin-right: 10px;
+  margin-right: 20px;
+  @media (min-width: 600px) {
+    margin: 10px 40px 10px 0;
+  }
 }
 
 .hero {
@@ -92,7 +99,7 @@ a {
   height: 100vh;
   width: 100vw;
   background-color: $storm-white--lower-opacity;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
 }
@@ -145,6 +152,9 @@ a {
 
 .banner {
   padding: 20px;
+  @media (min-width: 600px) {
+    padding: 40px;
+  }
 }
 
 .banner-blue {
