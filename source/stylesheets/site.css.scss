@@ -13,6 +13,21 @@ h1, h2 {
   font-weight: 400;
 }
 
+h1 {
+  font-size: 3rem;
+  margin: 0;
+  @media (min-width: 600px) {
+    font-size: 3rem;
+  }
+  @media (min-width: 900px) {
+    font-size: 4rem;
+  }
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -43,35 +58,89 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 10px;
+  color: $storm-grey;
 }
 
-.hero--header {
-
+.hero--content-container {
+  background-color: $storm-white--lower-opacity;
+  padding: 10px;
+  text-align: center;
 }
 
 .hero--cta {
+  width: 100px;
+  cursor: pointer;
+  color: $storm-white;
+  background-color: $storm-red;
+  border: $storm-white solid 1px;
+  height: 27px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin: 20px auto 0 auto;
+  transition: color 0.3s, background-color 0.3s;
+}
 
+.hero--cta:hover {
+  color: $storm-red;
+  background-color: $storm-white--lower-opacity;
 }
 
 .pop-up-form--container {
-
-}
-
-.pop-up-form--close-icon {
-
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: $storm-white--lower-opacity;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .pop-up-form--form {
+  position: relative;
+  border-top: 30px solid $storm-red;
+  background-color: $storm-blue;
+  margin: 10px;
+  padding: 20px 0;
+  text-align: center;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+.pop-up-form--close-icon {
+  stroke: $storm-white;
+  stroke-width: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(4px,-24px);
+  cursor: pointer;
 }
 
 .pop-up-form--field {
-
+  margin-bottom: 10px;
+  width: 260px;
+  border: $storm-white solid 2px;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
-.pop-up-form--submit {
+.pop-up-form--field[type=submit] {
+  margin-bottom: 0;
+  width: 100px;
+  cursor: pointer;
+  color: $storm-white;
+  background-color: $storm-red;
+  border-width: 1px;
+  height: 27px;
+  transition: color 0.3s, background-color 0.3s;
+}
 
+.pop-up-form--field[type=submit]:hover {
+  background-color: $storm-white;
+  color: $storm-red;
 }
 
 .banner {
@@ -86,14 +155,24 @@ a {
   background-color: $storm-red;
 }
 
-.banner-3-columns {
-
-}
-
 .banner--heading {
 
 }
 
+.banner-3-columns {
+  @media (min-width: 900px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
 .banner--content {
 
+}
+
+.banner-3-columns .banner--content {
+  @media (min-width: 900px) {
+    width: 30%;
+  }
 }
