@@ -1,3 +1,99 @@
 @charset "utf-8";
 
 @import "utils/colours";
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  margin: 0;
+  color: $storm-white;
+}
+
+h1, h2 {
+  font-weight: 400;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.menu {
+  background-color: $storm-red;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  height: 21px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px 0;
+}
+
+.menu--link {
+  margin-right: 10px;
+}
+
+.hero {
+  background-image: url('../images/bg-stormtest.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+}
+
+.hero--header {
+
+}
+
+.hero--cta {
+
+}
+
+.pop-up-form--container {
+
+}
+
+.pop-up-form--close-icon {
+
+}
+
+.pop-up-form--form {
+
+}
+
+.pop-up-form--field {
+
+}
+
+.pop-up-form--submit {
+
+}
+
+.banner {
+  padding: 20px;
+}
+
+.banner-blue {
+  background-color: $storm-blue;
+}
+
+.banner-red {
+  background-color: $storm-red;
+}
+
+.banner-3-columns {
+
+}
+
+.banner--heading {
+
+}
+
+.banner--content {
+
+}
